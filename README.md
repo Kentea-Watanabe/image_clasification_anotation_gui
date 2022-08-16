@@ -6,6 +6,12 @@ Pythonのtkinterで開発したクラス分類器用のGUIアノテーション�
 ## 環境
 * python 3.6.5
 
+## ショートカットキーについて
+「→」：次の画像へ
+「←」：前の画像へ
+「数字キー」：指定したクラスを選択（9クラス目まで)
+「アルファベットキー」：指定したクラスを選択（10クラス目から)
+
 ## 使い方
 ```
 git clone https://github.com/Kentea-Watanabe/image_clasification_anotation_gui.git
