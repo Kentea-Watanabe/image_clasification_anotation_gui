@@ -17,4 +17,4 @@ print(df)
 # read_jsonした結果だとネストしたjsonを展開できないのでnormalizeで展開させる
 # df_json = json_normalize(df['data'])
 # print(df_json)
-df.to_csv("out.csv", encoding='utf-8')
+df.to_csv("label.csv", encoding='utf-8')
