@@ -4,6 +4,7 @@
 Pythonのtkinterで開発したクラス分類器用のGUIアノテーションツール
 
 ## 環境
-* python 3.x
-* pillow 5.x
+* python 3.6.5
+
+
 
