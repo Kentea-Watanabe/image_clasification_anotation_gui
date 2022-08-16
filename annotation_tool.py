@@ -9,7 +9,7 @@ from PIL import Image, ImageOps, ImageTk
 # to do 画像フォルダのパス指定
 images_dir = ".\\images" # 画像フォルダのパス
 json_path  = ".\\result.json" # 出力(json)ファイルのパス
-classes = ["フォーマル", "カジュアル", "不明"] # 分類するクラス（自動的に0 or 1 or 2が入る）
+classes = ["犬", "猫", "不明"] # 分類するクラス（自動的に0 or 1 or 2が入る）
 image_width = 800 # 表示画像の幅
 image_height = 450 # 表示画像の高さ
 #----------------------------------------------------------------------
