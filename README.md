@@ -38,5 +38,13 @@ python anotation_tool.py
 python json_csv.py
 ```
 
+## Label形式
+* label.csv
+
+|    |  img_path  |  label  |
+| ---- | ---- | ---- |
+|  0  |  test1.jpg  | 0 |
+|  0  |  test2.jpg  | 1 |
+
 ##  Sample image
 ![image](https://user-images.githubusercontent.com/87839643/184858357-3339a9a0-9343-4965-ad82-5b493bf0d390.png)
