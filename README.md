@@ -6,5 +6,9 @@ Pythonのtkinterで開発したクラス分類器用のGUIアノテーション�
 ## 環境
 * python 3.6.5
 
+## 使い方
+```
+git clone 
+```
 
 
