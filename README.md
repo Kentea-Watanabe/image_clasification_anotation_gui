@@ -32,3 +32,4 @@ json_csv.pyを実行し、jsonファイルをcsvファイルに出力する<br>
 python json_csv.py
 ```
 
+![image](https://user-images.githubusercontent.com/87839643/184858357-3339a9a0-9343-4965-ad82-5b493bf0d390.png)
