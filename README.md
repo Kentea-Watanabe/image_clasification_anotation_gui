@@ -26,8 +26,8 @@ python anotation_tool.pyの中身のinput画像のパスを変更
 python anotation_tool.py
 ```
 
+ラベルの数だけ、json_csv.pyの中身のdf.dolumnsの値を指定する<br>
 json_csv.pyを実行し、jsonファイルをcsvファイルに出力する<br>
-ラベルの数だけ、df.dolumnsの値を指定する<br>
 ```
 python json_csv.py
 ```
