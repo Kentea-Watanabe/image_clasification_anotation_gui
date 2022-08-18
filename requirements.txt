@@ -7,3 +7,4 @@ pytz==2022.2.1
 six==1.16.0
 tkinter-page==0.0.5
 typish==1.9.3
+opencv-python==4.6.0.66
