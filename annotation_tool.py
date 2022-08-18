@@ -1,5 +1,6 @@
 import json
 import os
+import tkinter as tk
 from tkinter import *
 from tkinter import font
 
@@ -38,6 +39,7 @@ class MainWindow:
         font_label_index = font.Font(size=15)
         # タイトルの設定
         self.main.title("アノテーションツール")
+        self.main.geometry("1200x800")
 
         # 画像サイズを取得
         img = Image.open(
@@ -46,8 +48,12 @@ class MainWindow:
         image_height, image_width = img.size
 
         # 画像を表示するキャンバスを作る
-        self.canvas = Canvas(self.main, width=image_width, height=image_height)
+        self.canvas = Canvas(self.main, width=900, height=500) # , width=image_width, height=image_height)
         self.canvas.grid(row=0, column=0, columnspan=7, rowspan=1)
+
+        canvas_width = self.canvas.winfo_width()
+        canvas_height = self.canvas.winfo_height()
+
         # 次の画像を表示するボタン
         self.button_next = Button(
             self.main, text="Next (→)", command=self.onNextButton, height=3
@@ -72,6 +78,7 @@ class MainWindow:
             self.button_class[i].grid(
                 row=(i // 7) + 3, column=i % 7, padx=5, pady=10, sticky="nsew"
             )
+        
         # ラベルの内容の初期化
         self.message_image_index = StringVar()
         self.message_image_class = StringVar()
@@ -91,9 +98,21 @@ class MainWindow:
         )
         self.label_image_index.grid(row=2, column=3, pady=10, sticky="nsew")
         # 最初の画像をセット
-        self.image_on_canvas = self.canvas.create_image(0, 0, anchor=NW, image=self.img)
+        self.image_on_canvas = self.canvas.create_image(canvas_width / 2, canvas_height / 2, anchor=NW, image=self.img)
         self.set_image()
 
+    # def create_status_bar(self):
+    #     '''ステータスバー'''
+    #     frame_status_bar = tk.Frame(self.master, borderwidth = 2, relief = tk.SUNKEN)
+
+    #     self.label1 = tk.Label(frame_status_bar, text = "ステータスラベル１")
+    #     self.label2 = tk.Label(frame_status_bar, text = "ステータスラベル２")
+
+    #     self.label1.pack(side = tk.LEFT)
+    #     self.label2.pack(side = tk.RIGHT)
+
+    #     frame_status_bar.pack(side = tk.BOTTOM, fill = tk.X)
+    
     def init_shortcuts(self):
         self.main.focus_set()
         self.main.bind("<Key-Right>", self.onNextButton)
@@ -120,6 +139,7 @@ class MainWindow:
         )
         self.img = ImageTk.PhotoImage(img)
         self.canvas.itemconfig(self.image_on_canvas, image=self.img)
+        
 
     def get_class_name(self, img_path):
         data = self.load_json()
